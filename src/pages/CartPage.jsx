@@ -7,8 +7,8 @@ function CartPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const cartUrl = "https://fakestoreapi.com";
-    const productsUrl = "https://fakestoreapi.com";
+    const cartUrl = "https://fakestoreapi.com/carts/1";
+    const productsUrl = "https://fakestoreapi.com/products";
 
     Promise.all([axios.get(cartUrl), axios.get(productsUrl)])
       .then(([cartResponse, productsResponse]) => {
